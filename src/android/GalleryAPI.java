@@ -130,7 +130,7 @@ public class GalleryAPI extends CordovaPlugin {
             put("title", MediaStore.Images.ImageColumns.BUCKET_DISPLAY_NAME);
         }};
 
-        final ArrayOfObjects results = queryContentProvider(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, columns, "1) GROUP BY 1,(2");
+        final ArrayOfObjects results = queryContentProvider(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, columns, null);
 
         Object collection = null;
         for (int i = 0; i < results.size(); i++) {
